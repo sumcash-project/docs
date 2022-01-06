@@ -1,7 +1,7 @@
 # Protocol versions (changelog)
 
-Sumcoin protocol versions do not represent Sumcoin client versions, however client hosted at www.github.com/sumcoin/sumcoin is considered Sumcoin reference implementation.
-Sumcoin protocol version are marked using the following format:
+Sumcash protocol versions do not represent Sumcash client versions, however client hosted at www.github.com/sumcash-project/sumcash is considered Sumcash reference implementation.
+Sumcash protocol version are marked using the following format:
 
 `v{major_version}.{minor_version}`
 
@@ -27,8 +27,8 @@ where:
 
 > type: hardfork
 
-* [rfc-0007](https://github.com/sumcoin/rfcs/blob/master/text/0007-round-transaction-fees-up-to-0.001/0007-round-transaction-fees-up-to-0.001.md)
-* [rfc-0008](https://github.com/sumcoin/rfcs/blob/master/text/0008-increase-op-return-size-limit/0008-increase-op-return-size-limit.md)
+* [rfc-0007](https://github.com/sumcash-project/rfcs/blob/master/text/0007-round-transaction-fees-up-to-0.001/0007-round-transaction-fees-up-to-0.001.md)
+* [rfc-0008](https://github.com/sumcash-project/rfcs/blob/master/text/0008-increase-op-return-size-limit/0008-increase-op-return-size-limit.md)
 
 
 ## v0.8
@@ -40,7 +40,7 @@ where:
 * rebase to bitcoin-core 0.16.3
 * Compact blocks support (BIP152) with upgraded protocol version to 70015
 * HD wallet support (BIP32)
-* [rfc-0006](https://github.com/sumcoin/rfcs/blob/master/text/0006-remove-pow-block-signature/0006-remove-pow-block-signature.md)
+* [rfc-0006](https://github.com/sumcash-project/rfcs/blob/master/text/0006-remove-pow-block-signature/0006-remove-pow-block-signature.md)
 * mainnet fork is scheduled for 1st of October 2019, activating BIPS 62, 68, 112, 113 and 141
 
 ## v0.9
@@ -49,10 +49,10 @@ where:
 
 > type: hardfork
 
-* [RFC-0019](https://github.com/sumcoin/rfcs/blob/master/text/0019-pow-block-spacing/0019-pow-block-spacing.md): PoW Block Spacing
-* [RFC-0018](https://github.com/sumcoin/rfcs/blob/master/text/0018-pos-reward/0018-pos-reward.md): PoS Rewards Adjustment
-* [RFC-0017](https://github.com/sumcoin/rfcs/blob/master/text/0017-coinage-limit/0017-coinage-limit.md): Limit Effective Coinage to One Year
-* [RFC-0015](https://github.com/sumcoin/rfcs/blob/master/text/0015-time-drift/0015-time-drift.md): Reduce Time Drift
+* [RFC-0019](https://github.com/sumcash-project/rfcs/blob/master/text/0019-pow-block-spacing/0019-pow-block-spacing.md): PoW Block Spacing
+* [RFC-0018](https://github.com/sumcash-project/rfcs/blob/master/text/0018-pos-reward/0018-pos-reward.md): PoS Rewards Adjustment
+* [RFC-0017](https://github.com/sumcash-project/rfcs/blob/master/text/0017-coinage-limit/0017-coinage-limit.md): Limit Effective Coinage to One Year
+* [RFC-0015](https://github.com/sumcash-project/rfcs/blob/master/text/0015-time-drift/0015-time-drift.md): Reduce Time Drift
 * allow staking=0 command to disable minting (nominting=0 also works)
 * ability to filter out mint transactions in the QT wallet
 
@@ -71,6 +71,6 @@ Rebased to latest Bitcoin-core codebase.
 
 > type: hardfork
 
-* [RFC-0014](https://github.com/sumcoin/rfcs/blob/master/text/0014-transaction-timestamp/0014-transaction-timestamp.md): Remove Transaction Timestamp
-* [RFC-0022](https://github.com/sumcoin/rfcs/blob/master/text/0022-pow-reward-cap/0022-pow-reward-cap.md): Proof-of-Work reward cap
+* [RFC-0014](https://github.com/sumcash-project/rfcs/blob/master/text/0014-transaction-timestamp/0014-transaction-timestamp.md): Remove Transaction Timestamp
+* [RFC-0022](https://github.com/sumcash-project/rfcs/blob/master/text/0022-pow-reward-cap/0022-pow-reward-cap.md): Proof-of-Work reward cap
 * make splitting coins during minting optional

@@ -2,8 +2,8 @@
 
 > PeerAssets offers the framework that enables communities and organizations to issue and transact with blockchain assets.
 
-PeerAssets is a Sumcoin in-house developed blockchain token protocol. At the time of writing PeerAssets is tailored to work with the Sumcoin blockchain, however there are plans to port the technology to other blockchains like Bitcoin and allow for cross-chain compatibility. PeerAssets is as minimalist as possible, seeking to find the most efficient and affordable method for a blockchain to support tokenization.
-PeerAssets transactions are standard Sumcoin transactions, relayed by the standard nodes and processed by miners as any other transaction. Unlike many similar protocols ([Omni](http://www.omnilayer.org/), [CounterParty](http://counterparty.io/)), PeerAssets does not use so called "auxilary" tokens (Omni and XCP respectively), it only uses blockchain's native currency which is used to pay transaction fees. PeerAssets protocol does not require hard nor soft fork of the host network, but it requires development of a PeerAssets aware client. PeerAssets is also inspired by the original idea of "Colored Coins" and uses OP_RETURN to write data on the blockchain, but offers some optimizations to reduce amount of data written in the OP_RETURN and reducing blockchain bloat.
+PeerAssets is a Sumcash in-house developed blockchain token protocol. At the time of writing PeerAssets is tailored to work with the Sumcash blockchain, however there are plans to port the technology to other blockchains like Bitcoin and allow for cross-chain compatibility. PeerAssets is as minimalist as possible, seeking to find the most efficient and affordable method for a blockchain to support tokenization.
+PeerAssets transactions are standard Sumcash transactions, relayed by the standard nodes and processed by miners as any other transaction. Unlike many similar protocols ([Omni](http://www.omnilayer.org/), [CounterParty](http://counterparty.io/)), PeerAssets does not use so called "auxilary" tokens (Omni and XCP respectively), it only uses blockchain's native currency which is used to pay transaction fees. PeerAssets protocol does not require hard nor soft fork of the host network, but it requires development of a PeerAssets aware client. PeerAssets is also inspired by the original idea of "Colored Coins" and uses OP_RETURN to write data on the blockchain, but offers some optimizations to reduce amount of data written in the OP_RETURN and reducing blockchain bloat.
 PeerAssets enables easy querying of the blockchain for relevant transactions via the use P2TH, which allows development of very light clients and does not mandate the use of resource intense blockchain-parsing nodes which are common with competing protocols.
 
 PeerAsset protocol based assets can be utilized to represent any type of asset like bonds or equity. PeerAssets can also represent real life objects, and by doing so confirm their existence on the blockchain.
@@ -24,7 +24,7 @@ PeerAssets protocol has four elemental transaction types:
 
 * **Deck spawning transaction**
 
-Creates a new token at a given Sumcoin address. Asset is described by:
+Creates a new token at a given Sumcash address. Asset is described by:
 * token name,
 * descriptive metadata,
 * how divisible the token is (number of decimals),
@@ -34,7 +34,7 @@ Deck issue modes can be understood as light smart contracts, speaking in modern 
 
 * **Card issue transaction**
 
-Creates new tokens of `deck` at given Sumcoin address.
+Creates new tokens of `deck` at given Sumcash address.
 
 * **Card burn transaction**
 
@@ -64,7 +64,7 @@ PeerAssets API provider, implemented using pypeerassets.
 
 github: https://github.com/PeerAssets/papi
 
-deployed: https://papi.sumcoin.org/api/v1/decks
+deployed: https://papi.sumcash.net/api/v1/decks
 
 ## Wallets
 
@@ -72,7 +72,7 @@ deployed: https://papi.sumcoin.org/api/v1/decks
 
 (work in progress)
 
-A light, cross-platform Sumcoin wallet with baked-in support for the PeerAssets.
+A light, cross-platform Sumcash wallet with baked-in support for the PeerAssets.
 
 code: https://github.com/peerassets/chizukeki
 
@@ -80,14 +80,14 @@ deployed: https://peerassets.github.io/chizukeki/
 
 ## Future plans & research
 
-The PeerAssets project has adopted [RFC](https://en.wikipedia.org/wiki/Request_for_Comments) schema of sharing new ideas and establishing standards like the Sumcoin project.
+The PeerAssets project has adopted [RFC](https://en.wikipedia.org/wiki/Request_for_Comments) schema of sharing new ideas and establishing standards like the Sumcash project.
 RFC's are submitted on the PeerAssets [github repo](https://github.com/PeerAssets/peerassets-rfcs) and peer-reviewed, after which code experimentation and final implementation proceeds.
 
 There is a number of interesting RFC which are currently discussed, such as:
 
 [PeerAssets Alias/Proof-of-identity protocol specification](https://github.com/PeerAssets/peerassets-rfcs/blob/master/0003-peerassets-alias-poid-protocol-specification.md)
 
-> Extension of PeerAssets protocol specifies using singlet PeerAsset deck to alias the Sumcoin address with any UTF-8 string with added secondary functionality of using descriptive information contained in the PeerAssets token to allow proof-of-identity verification of the privkey owner.
+> Extension of PeerAssets protocol specifies using singlet PeerAsset deck to alias the Sumcash address with any UTF-8 string with added secondary functionality of using descriptive information contained in the PeerAssets token to allow proof-of-identity verification of the privkey owner.
 
 [PeerAssets on-chain voting protocol specification](https://github.com/PeerAssets/peerassets-rfcs/blob/master/0005-on-chain-voting-protocol-proposal.md)
 
@@ -100,10 +100,10 @@ There is a number of interesting RFC which are currently discussed, such as:
 ## Articles
 [Whitepaper](http://peerassets.github.io/WhitePaper/)
 
-[PeerAssets deck issue modes](https://medium.com/sumcoin/peerassets-deck-issue-modes-c419f38f7800)
+[PeerAssets deck issue modes](https://medium.com/sumcash/peerassets-deck-issue-modes-c419f38f7800)
 
-[The benefits of PeerAssets](https://medium.com/sumcoin/the-benefits-of-peerassets-77bad7693925)
+[The benefits of PeerAssets](https://medium.com/sumcash/the-benefits-of-peerassets-77bad7693925)
 
-[[Tutorial] PeerAssets Peer to Peer (p2p) Transactions](https://talk.sumcoin.org/t/tutorial-peerassets-peer-to-peer-p2p-transactions/8640)
+[[Tutorial] PeerAssets Peer to Peer (p2p) Transactions](https://talk.sumcash.net/t/tutorial-peerassets-peer-to-peer-p2p-transactions/8640)
 
-[[Tutorial] Basic Deck Creation with PeerAssets](https://talk.sumcoin.org/t/tutorial-basic-deck-creation-with-peerassets/8639)
+[[Tutorial] Basic Deck Creation with PeerAssets](https://talk.sumcash.net/t/tutorial-basic-deck-creation-with-peerassets/8639)

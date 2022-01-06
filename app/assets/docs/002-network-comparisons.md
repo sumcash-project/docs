@@ -1,21 +1,21 @@
 # Comparison with other blockchain networks
 
-Sumcoin is best compared with its sibling - Bitcoin; however in the following table we'll show how it bodes against something vastly different like Ethereum. Sumcoin was invented as response to increasing doubts on Bitcoin's PoW consensus model with regards to its increasing centralization and conflict of interests between miners. Sumcoin can be understood as a Proof-of-Stake clone of Bitcoin, though that is an oversimplification as Sumcoin differs vastly - especially when it comes to economics and incentives of the system.
-Major differences between the two are the fee market, ie. the absence of it in Sumcoin and Sumcoin's dedication to continual token distribution via PoW block rewards while the Bitcoin's distribution rate (also PoW block rewards) is reduced geometrically every four years until it becomes zero.
+Sumcash is best compared with its sibling - Bitcoin; however in the following table we'll show how it bodes against something vastly different like Ethereum. Sumcash was invented as response to increasing doubts on Bitcoin's PoW consensus model with regards to its increasing centralization and conflict of interests between miners. Sumcash can be understood as a Proof-of-Stake clone of Bitcoin, though that is an oversimplification as Sumcash differs vastly - especially when it comes to economics and incentives of the system.
+Major differences between the two are the fee market, ie. the absence of it in Sumcash and Sumcash's dedication to continual token distribution via PoW block rewards while the Bitcoin's distribution rate (also PoW block rewards) is reduced geometrically every four years until it becomes zero.
 
 ## Consensus algorithm
 
-Sumcoin is secured by Proof-of-Stake consensus. Proof-of-Work uses energy as a scarce resource as means of selecting a block producer, while Proof-of-Stake uses time as a scare resource measured in "coin age". Once a transaction has reached an age of thirty days, these coins become eligible for participation in consensus. Mature UTXOs are used as proof of stake and are presented as evidence throught the "coinstake" transaction of a new block. [Reference client](https://github.com/sumcoin/sumcoin) will try to find a new block once every second. If block is accepted by the network, a reward will be given to the minter. After ninety (90) days, a transaction reaches its maximum maturity and minting probability is at its highest. This minting can be done by simple, low energy computers, such as a raspberry pi, making the process energy efficient when compared to Proof-of-Work power consumption.
+Sumcash is secured by Proof-of-Stake consensus. Proof-of-Work uses energy as a scarce resource as means of selecting a block producer, while Proof-of-Stake uses time as a scare resource measured in "coin age". Once a transaction has reached an age of thirty days, these coins become eligible for participation in consensus. Mature UTXOs are used as proof of stake and are presented as evidence throught the "coinstake" transaction of a new block. [Reference client](https://github.com/sumcash-project/sumcash) will try to find a new block once every second. If block is accepted by the network, a reward will be given to the minter. After ninety (90) days, a transaction reaches its maximum maturity and minting probability is at its highest. This minting can be done by simple, low energy computers, such as a raspberry pi, making the process energy efficient when compared to Proof-of-Work power consumption.
 
-Another benefit of Sumcoin's Proof-of-Stake mechanism is its monetary cost of attack. With Proof-of-Work, and individual can attempt to generate and verify faulty blocks without holding the Proof-of-Work coin or even a majority of the coin supply. Sumcoin requires the  malicious individual to hold Sumcoin with a coin age of thirty days minimum, as well as being required to hold a majority sum of the Sumcoin supply, increasing their risk massively. This makes such an attack economically unviable. The requirement of those verifying the blockchain to hold a portion of the supply means investors are protected from malicious outside sources who hold no coins.  Those who hold Sumcoin and use the network, share interest in the security of the chain.
+Another benefit of Sumcash's Proof-of-Stake mechanism is its monetary cost of attack. With Proof-of-Work, and individual can attempt to generate and verify faulty blocks without holding the Proof-of-Work coin or even a majority of the coin supply. Sumcash requires the  malicious individual to hold Sumcash with a coin age of thirty days minimum, as well as being required to hold a majority sum of the Sumcash supply, increasing their risk massively. This makes such an attack economically unviable. The requirement of those verifying the blockchain to hold a portion of the supply means investors are protected from malicious outside sources who hold no coins.  Those who hold Sumcash and use the network, share interest in the security of the chain.
 
 ## Distribution
 
-Sumcoin is continually distributed via PoW block rewards. At the time of writing there is 27,264,390 SUM issued with annual inflation of 2.37%.
-The `MAX_MONEY` variable in the Sumcoin source code is nothing but a placeholder.
-There is no final number of Sumcoins issued, while inflation is steadily diverging toward fixed 1%.
-Sumcoin PoW block reward is product of network Proof-of-Work hashrate: the higher the network hashrate, the lower the block reward.
-This mechanism is effectively "pegging" the issuance of Sumcoins to the development of Scrypt ASIC miners. Reasoning behind this decision is that it's expected that development of Scrypt miners represents the level of advancement of general cryptocurrency scene, at least that is something that is visible to the blockchain and can be encoded into an algorithm.
+Sumcash is continually distributed via PoW block rewards. At the time of writing there is 27,264,390 SUMC issued with annual inflation of 2.37%.
+The `MAX_MONEY` variable in the Sumcash source code is nothing but a placeholder.
+There is no final number of Sumcashs issued, while inflation is steadily diverging toward fixed 1%.
+Sumcash PoW block reward is product of network Proof-of-Work hashrate: the higher the network hashrate, the lower the block reward.
+This mechanism is effectively "pegging" the issuance of Sumcashs to the development of Scrypt ASIC miners. Reasoning behind this decision is that it's expected that development of Scrypt miners represents the level of advancement of general cryptocurrency scene, at least that is something that is visible to the blockchain and can be encoded into an algorithm.
 
 Proof-of-Work reward formula is: `block_subsidy = 9999 / difficulty ^ (1/4)`
 
@@ -26,25 +26,25 @@ Proof-of-Work coin mint rate is a function of difficulty, for every 16x in diffi
 The fee market provides a mechanism to decide which transactions have priority over the others, and to create economic incentives for the transaction validators who usually claim the fees as rewards. Transaction fees are claimed by the block miner in both Bitcoin and Ethereum economic systems. This provides the miners the incentive to validate and include transactions in the blocks they mine. If Alice wants her transaction to be included in the next block, she should set transaction fee higher and pay more then other network users, ie. outbid them. It is presumed that miners, as rational subjects, will first include transactions which carry the most Bitcoin value. If Alice pays a transaction fee which is under the average fee at the time she might wait for several blocks (or hundreds of blocks) to see her transaction included and confirmed. So, it is obvious that the fee market serves as the incentive for miners to process and include the transactions in the blocks they mine.
 With Bitcoin's block size limit set to 1MB there exists an artificial upward pressure on the price of transaction fees - incentivizing miners to validate the transactions. This is especially important as Bitcoin's economy is expected to run on transaction fees alone when the block subsidies eventually stop.
 
-Sumcoin's fees are fixed at 0.01 SUM per kb and are burned. This is equivalent to paying the transaction fee to each Sumcoin holder in proportion to their Sumcoin holdings since the fee decreases the total supply of Sumcoins. This property eliminates the need for a fee market on Sumcoin's network and allows every transaction to get included in the very next block. Sumcoin retains the 1MB block size limit as it is based on the Bitcoin code, but it has no intricate need to keep it. The block size limit will definitely be increased as Sumcoin's network grows in usage. Sumcoin developers have already hinted that Sumcoin will feature a dynamic block size in the near future.
-Due to these economic properties of Sumcoin a question arises: Why do Sumcoin miners bother processing the transactions?
+Sumcash's fees are fixed at 0.01 SUMC per kb and are burned. This is equivalent to paying the transaction fee to each Sumcash holder in proportion to their Sumcash holdings since the fee decreases the total supply of Sumcashs. This property eliminates the need for a fee market on Sumcash's network and allows every transaction to get included in the very next block. Sumcash retains the 1MB block size limit as it is based on the Bitcoin code, but it has no intricate need to keep it. The block size limit will definitely be increased as Sumcash's network grows in usage. Sumcash developers have already hinted that Sumcash will feature a dynamic block size in the near future.
+Due to these economic properties of Sumcash a question arises: Why do Sumcash miners bother processing the transactions?
 
-From a spectator looking at this from a Bitcoin oriented perspective the answer is that Sumcoin block miners want to process transactions so they allow Sumcoins to be burned - thus making their own stake in the network more valuable.
-However when the intricacies of PoS are learned it is understood that with Sumcoin minters (PoS miners) include transactions because it doesn't cost much to include them, while producing empty blocks reduces the value of the blockchain, and therefore of their stake. The burned fees are not really an argument as the effect on their holdings is negligible.
+From a spectator looking at this from a Bitcoin oriented perspective the answer is that Sumcash block miners want to process transactions so they allow Sumcashs to be burned - thus making their own stake in the network more valuable.
+However when the intricacies of PoS are learned it is understood that with Sumcash minters (PoS miners) include transactions because it doesn't cost much to include them, while producing empty blocks reduces the value of the blockchain, and therefore of their stake. The burned fees are not really an argument as the effect on their holdings is negligible.
 Bitcoin miners always start off mining an empty block, otherwise they lose the time it takes to validate the transactions and signatures, as time is money on the Bitcoin network. Only after they have validated the txns to include and have computed the merkle root, they start mining blocks with txns.
 While for PoS, the time advantage is negligible as you can still use the stake hash of a few seconds ago. (hrobeers, 30.08.2017)
 
 ## Block size limit and block time spacing
 
-Bitcoin features the 1MB block size limits which serves to place the upward pressure on the transaction fee price, Sumcoin copies this parameter from the Bitcoin but it's economic model does not depend on scarcity of the block space.
-While block generation is a stochastic process, each chain is targeted to generate blocks based on a real time interval. Bitcoin generates a block every 30 Seconds, akin to Sumcoin PoS block generation, while Ethereum generates a block every 12 seconds.  Sumcoin PoW block generation is coupled to PoS block generation as well as PoW hash power and is therefore difficult to approximate, but the total block time of Sumcoin can be empirically estimated to be around 8.5 minutes. Considering this and the block size limit of 1MB, Bitcoin has a transaction per second (TPS) of about 7 tps, Sumcoin has an estimated 8 tps, and Ethereum has about 25 tps.
+Bitcoin features the 1MB block size limits which serves to place the upward pressure on the transaction fee price, Sumcash copies this parameter from the Bitcoin but it's economic model does not depend on scarcity of the block space.
+While block generation is a stochastic process, each chain is targeted to generate blocks based on a real time interval. Bitcoin generates a block every 30 Seconds, akin to Sumcash PoS block generation, while Ethereum generates a block every 12 seconds.  Sumcash PoW block generation is coupled to PoS block generation as well as PoW hash power and is therefore difficult to approximate, but the total block time of Sumcash can be empirically estimated to be around 8.5 minutes. Considering this and the block size limit of 1MB, Bitcoin has a transaction per second (TPS) of about 7 tps, Sumcash has an estimated 8 tps, and Ethereum has about 25 tps.
 
 <table>
 <thead>
 <tr>
 <th>Features</th>
 <th>Bitcoin</th>
-<th>Sumcoin</th>
+<th>Sumcash</th>
 <th>Ethereum</th>
 </tr>
 </thead>
@@ -84,7 +84,7 @@ While block generation is a stochastic process, each chain is targeted to genera
 <tr>
 <td>Transaction fee:</td>
 <td>Fee market (~390 satoshis/byte)</td>
-<td>Static 0.01 SUM/kb (~0.2 Btc satoshis/byte)</td>
+<td>Static 0.01 SUMC/kb (~0.2 Btc satoshis/byte)</td>
 <td>Fee market (~23 Gwei/byte)</td>
 </tr>
 <tr>

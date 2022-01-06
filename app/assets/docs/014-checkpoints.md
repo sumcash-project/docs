@@ -1,6 +1,6 @@
 # Checkpoints
 
-Checkpoints are chosen block heights for which the checksum is saved the Sumcoin client. With the help of checkpoints, your client is able to identify if it has downloaded the correct blockchain or if an attacker attempts to provide it with a chain featuring "fake history".
+Checkpoints are chosen block heights for which the checksum is saved the Sumcash client. With the help of checkpoints, your client is able to identify if it has downloaded the correct blockchain or if an attacker attempts to provide it with a chain featuring "fake history".
 
 ## Deep chain reorganizations
 
@@ -16,24 +16,24 @@ Checkpoints serve to protect the history of the blockchain and prevent deep chai
 
 Deep chain reorganizations are theoretically easier to accomplish on a Proof-of-Stake system as an attacker can fabricate the history "for free", this is commonly referred to as Nothing-at-Stake attack and is probably the most criticized element of all the Proof-of-Stake systems.
 
-As of time of the writing Sumcoin uses both centrally broadcast checkpoints which are signed with the developer's private key and hardened checkpoints encoded in the client itself.
+As of time of the writing Sumcash uses both centrally broadcast checkpoints which are signed with the developer's private key and hardened checkpoints encoded in the client itself.
 Alternative public PoS blockchains have approached the matter in somewhat different manner, like NXT and it's 720 block anti-rollback protection, Decred with PoW based timestamping<sup>[1](#footnote-1)</sup> and few alternative proposals like checkpointing against the Bitcoin network by periodically etching messages into the Bitcoin blockchain.
 
 We are confident that the Nothing-at-stake attack is orders of magnitude less likely to occur then it's usually portrayed in the mainstream "blockchain" media.
 It's incredibly expensive to construct and organize the attack.
 
-## Why is Sumcoin still keeping the checkpoints?
+## Why is Sumcash still keeping the checkpoints?
 
-> Checkpoints system is probably the most criticized design choice of Sumcoin, frequently used to undermine the project.
+> Checkpoints system is probably the most criticized design choice of Sumcash, frequently used to undermine the project.
 
-> Common myth is that Sumcoin concesus is not safe without the centralized checkpoints, but that is absolutely not true.
+> Common myth is that Sumcash concesus is not safe without the centralized checkpoints, but that is absolutely not true.
 
 As of version 0.2, centrally-broadcasted checkpointing is no longer a critical part of the protocol.
-It's purpose is to defend the network during the initial growth period, and to help ensure a smooth upgrade path, however it was largely kept because of inertia and low interest for the Sumcoin blockchain in period between early 2015 and late 2016. The checkpoints exist solely as a security measure: if something terrible were to happen, we have the checkpoints as a backup.
+It's purpose is to defend the network during the initial growth period, and to help ensure a smooth upgrade path, however it was largely kept because of inertia and low interest for the Sumcash blockchain in period between early 2015 and late 2016. The checkpoints exist solely as a security measure: if something terrible were to happen, we have the checkpoints as a backup.
 
-As of version 0.6 the official client allows for opting-out of the checkpoints entirely, while checkpoint system itself will likely be obsoleted and removed after the process of re-basing Sumcoin against modern Bitcoin-core codebase is complete.
+As of version 0.6 the official client allows for opting-out of the checkpoints entirely, while checkpoint system itself will likely be obsoleted and removed after the process of re-basing Sumcash against modern Bitcoin-core codebase is complete.
 
-As of version 0.10 support for checkpoints has been from official Sumcoin client.
+As of version 0.10 support for checkpoints has been from official Sumcash client.
 
 ## Footnotes
 

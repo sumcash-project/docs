@@ -7,12 +7,12 @@
 > a computer after power-on or general reset, especially the operating
 > system which will then take care of loading other software as needed.<sup>[9.1](#footnote-9.1)</sup>
 
-For Sumcoin it means loading all of the block chain history from a special
+For Sumcash it means loading all of the block chain history from a special
 file containing a snapshot of block data.
 
-This special file, named `bootstrap.dat`, allows the Sumcoin client to
+This special file, named `bootstrap.dat`, allows the Sumcash client to
 sync from your hard drive instead of the internet. Using a
-`bootstrap.dat` file is faster and reduces stress on the Sumcoin network to sync new nodes.
+`bootstrap.dat` file is faster and reduces stress on the Sumcash network to sync new nodes.
 
 ## How do I make a `bootstrap.dat`?
 
@@ -21,7 +21,7 @@ you're running linux you can do the following to manufacture your own.
 First, shutdown your client. Allow it to cleanly exit so we know the block
 data is settled.
 
-Now, navigate to the directory `~/.sumcoin/blocks` in your terminal and
+Now, navigate to the directory `~/.sumcash/blocks` in your terminal and
 notice the files named `blk00000.dat`, `blk00001.dat`, `blk00002.dat`, etc.
 These are the raw block data files that can be combined to form the
 `bootstrap.dat`!
@@ -34,13 +34,13 @@ The file is often then compressed (zip'ed, tar/gzip'ed) and shared.
 
 The same process can be executed on Microsoft Windows (7+):
 
-> CD C:\Users\<my_user>\AppData\Roaming\Sumcoin
+> CD C:\Users\<my_user>\AppData\Roaming\Sumcash
 
 > COPY /b blk0001.dat+blk0002.dat bootstrap.dat
 
 Or on OS X:
 
-> cd "~/Library/Application Support/Sumcoin/"
+> cd "~/Library/Application Support/Sumcash/"
 
 > cat blk*.dat > bootstrap.dat
 
@@ -51,12 +51,12 @@ On linux and OS X you can create hash of the bootstrap:
 
 ## How do I use a `bootstrap.dat`?
 
-Assuming you're on linux and you haven't started the Sumcoin client before.
+Assuming you're on linux and you haven't started the Sumcash client before.
 
-Make the directory `~/.sumcoin` if it doesn't exist and then move the
-`bootstrap.dat` into the `~/.sumcoin` directory.
+Make the directory `~/.sumcash` if it doesn't exist and then move the
+`bootstrap.dat` into the `~/.sumcash` directory.
 
-Start the Sumcoin client. You should see the status `Importing blocks from disk...` if the client has found the `bootstrap.dat` and is using it to
+Start the Sumcash client. You should see the status `Importing blocks from disk...` if the client has found the `bootstrap.dat` and is using it to
 sync the block chain.
 
 ## Footnotes

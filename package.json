@@ -1,9 +1,9 @@
 {
-  "name": "sumcoin-doc",
-  "description": "Sumcoin documentation",
-  "author": "Sumcoin",
+  "name": "sumcash-doc",
+  "description": "Sumcash documentation",
+  "author": "Sumcash",
   "version": "0.1.1",
-  "repository": "https://github.com/sumcoin/docs.git",
+  "repository": "https://github.com/sumcash-project/docs.git",
   "scripts": {
     "start": "brunch watch --server -n",
     "build": "echo 'Generating production optimized code, this may take a while...\n' && brunch build --production && echo 'You can find your production files at /public folder.\n\n'",

@@ -2,11 +2,11 @@
 
 ## Graphics
 
-A variety of Sumcoin graphics are available here: https://github.com/sumcoin/media
+A variety of Sumcash graphics are available here: https://github.com/sumcash-project/media
 
 ## Brand Identity
 
-Please use these color codes on your Sumcoin related websites whenever possible. This will help us keep the Sumcoin ecosystem and its branding and visuals consistent.
+Please use these color codes on your Sumcash related websites whenever possible. This will help us keep the Sumcash ecosystem and its branding and visuals consistent.
 
 Green:
 #276BCF
@@ -15,11 +15,11 @@ CMYK: 81, 48, 0, 19
 
 White: #ffffff
 
-The Sumcoin text logo uses the following font:
+The Sumcash text logo uses the following font:
 Font: FF Mark
 Type: Mark-Medium
 Website: http://www.ffmark.com/
 
-The Sumcoin website and wallets use the Roboto font for its content.
+The Sumcash website and wallets use the Roboto font for its content.
 
 ---

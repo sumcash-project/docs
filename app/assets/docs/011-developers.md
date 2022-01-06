@@ -4,7 +4,7 @@
 
 ### Compiling packages for Debian and Ubuntu
 
-As Sumcoin is made to run on range of platforms, from Amazon's server to low powered Raspberry Pi Debian is perfect OS platform for deploying Sumcoin nodes as it is renowned for multitude of supported hardware architectures as well as security and stability.
+As Sumcash is made to run on range of platforms, from Amazon's server to low powered Raspberry Pi Debian is perfect OS platform for deploying Sumcash nodes as it is renowned for multitude of supported hardware architectures as well as security and stability.
 
 For compilation of Debian packages we will be using `pbuilder` which is a automatic Debian Package Building system for personal development workstation environments.<sup>[3.1](#footnote-3.1)</sup> pbuilder aims to be an easy-to-setup system for auto-building Debian packages inside a clean-room environment, so that it is possible to verify that a package can be built on most Debian installations. The clean-room environment is achieved through the use of a base chroot image, so that only minimal packages will be installed inside the chroot.
 
@@ -109,13 +109,13 @@ Debian stable:
 
 (compiling for Raspbian stretch in this example)
 
-Download the latest .tar.gz from github.com/sumcoin.
+Download the latest .tar.gz from github.com/sumcash-project.
 
-> wget https://github.com/sumcoin/sumcoin/releases/download/v0.11.0sum/sumcoin-0.11.0.tar.gz
+> wget https://github.com/sumcash-project/sumcash/releases/download/v0.11.0sum/sumcash-0.11.0.tar.gz
 
 Debian build system is very strict about names, so we need to rename this to:
 
-`sumcoin_0.11.0.orig.tar.gz`
+`sumcash_0.11.0.orig.tar.gz`
 
 Extract the contests of the file using `tar xf` and `cd` to it.
 
@@ -145,18 +145,18 @@ For example OS=debian and DIST=wheezy will use Debian Wheezy chroot, you can als
 
 ## JSON-RPC API reference
 
-Sumcoin daemon offers JSON-RPC interface which can be used to control the daemon or integrate it with software stack.
-You can send commands to the daemon by using `sumcoin-cli` tool.
+Sumcash daemon offers JSON-RPC interface which can be used to control the daemon or integrate it with software stack.
+You can send commands to the daemon by using `sumcash-cli` tool.
 
 There are two official wrappers for this interface, a PHP one and a Python2.7+ one.
 
-> Sumcoin_rpc is a simple and minimal library made for communication with sumcoind via JSON-RPC protocol. It has a single dependency - a Python requests library and it supports both mainnet and testnet sumcoin network with authentication or SSL encryption. There is a single class to be imported from the library - Client.
+> Sumcash_rpc is a simple and minimal library made for communication with sumcashd via JSON-RPC protocol. It has a single dependency - a Python requests library and it supports both mainnet and testnet sumcash network with authentication or SSL encryption. There is a single class to be imported from the library - Client.
 
-https://github.com/sumcoin/sumcoin_rpc
+https://github.com/sumcash-project/sumcash_rpc
 
-> sumcoin-php-rpc is a simple and minimal library made for communication with sumcoind via JSON-RPC protocol for PHP 7.1+. Easiest way to use is to use composer. Otherwise include RpcClient class in your project an you are good to go.
+> sumcash-php-rpc is a simple and minimal library made for communication with sumcashd via JSON-RPC protocol for PHP 7.1+. Easiest way to use is to use composer. Otherwise include RpcClient class in your project an you are good to go.
 
-https://github.com/sumcoin/sumcoin-php-rpc
+https://github.com/sumcash-project/sumcash-php-rpc
 
 ### List of JSON-RPC calls
 
@@ -177,13 +177,13 @@ https://github.com/sumcoin/sumcoin-php-rpc
 | `getaccount`       | `address` |Returns the account associated with the given `address`.|no|
 | `getaccountaddress`| `account` |Returns the current address for receiving payments to this account.<br>If `account` does not exist, it will be created along with an associated new address that will be returned.|no|
 | `sendtoaddress`    | `address` `amount` [comment] [comment-to] |  `amount` is a real and is rounded to 6 decimal places. Returns the transaction ID `txid` if successful.|yes|
-| `sendfrom`         | `fromaccount` `tosumcoinaddress` `amount` [minconf=1] [comment] [comment-to] |`amount` is a real and is rounded to 6 decimal places. Will send the given amount to the given address, ensuring the account has a valid balance using [minconf] confirmations. Returns the transaction ID if successful (not in JSON object).|yes|
+| `sendfrom`         | `fromaccount` `tosumcashaddress` `amount` [minconf=1] [comment] [comment-to] |`amount` is a real and is rounded to 6 decimal places. Will send the given amount to the given address, ensuring the account has a valid balance using [minconf] confirmations. Returns the transaction ID if successful (not in JSON object).|yes|
 | `sendmany`         | `fromaccount` {address:amount,...} [minconf=1] [comment] |  amounts are double-precision floating point numbers |yes|
 | `getconnectioncount`|    |Returns the number of connections to other nodes.|no|
 | `getrawtransaction`|  `txid` [verbose=0] |Returns raw transaction representation for given transaction id.|no|
 | `getrawmempool`    |  |Returns all transaction ids in memory pool.|no|
 | `listtransactions` | [account] [count=10] [from=0] | Returns up to [count] most recent transactions skipping the first [from] transactions for account [account]. If [account] not provided it'll return recent transactions from all accounts.|no|
-| `listreceivedbyaddress`| [minconf=1] [includeempty=false] |Returns an array of objects containing:<br>"address" : receiving address<br>"account" : the account of the receiving address<br>"amount" : total amount received by the address<br>"confirmations" : number of confirmations of the most recent transaction included<br>To get a list of accounts on the system, execute `sumcoin-cli listreceivedbyaddress 0 true`|no|
+| `listreceivedbyaddress`| [minconf=1] [includeempty=false] |Returns an array of objects containing:<br>"address" : receiving address<br>"account" : the account of the receiving address<br>"amount" : total amount received by the address<br>"confirmations" : number of confirmations of the most recent transaction included<br>To get a list of accounts on the system, execute `sumcash-cli listreceivedbyaddress 0 true`|no|
 | `listreceivedbyaccount`| [minconf=1] [includeempty=false] |Returns an array of objects containing:<br>"account" : the account of the receiving addresses<br>"amount" : total amount received by addresses with this account<br>"confirmations" : number of confirmations of the most recent transaction included|no|
 | `listaccounts` | [minconf=1] |Returns Object that has account names as keys, account balances as values.|no|
 | `listunspent`  | [minconf=1] [maxconf=999999] |Returns array of unspent transaction inputs in the wallet.|no|
@@ -202,11 +202,11 @@ https://github.com/sumcoin/sumcoin-php-rpc
 | `listlockunspent`     |        |Returns list of temporarily unspendable outputs.|no|
 | `createmultisig`      | `nrequired` `["key,"key"]`|Creates a multi-signature address and returns a json object.|yes|
 
-## Sumcoin Developer Notes
+## Sumcash Developer Notes
 
-Constants that may be useful when looking to integrate / develop with Sumcoin.
+Constants that may be useful when looking to integrate / develop with Sumcash.
 
-Sumcoin source code repository: github.com/sumcoin/sumcoin
+Sumcash source code repository: github.com/sumcash-project/sumcash
 
 ### Mainnet
 
@@ -248,7 +248,7 @@ Sumcoin source code repository: github.com/sumcoin/sumcoin
 
 ## Transaction format
 
-Sumcoin transaction format is indendical to a Bitcoin transaction format with the exception of included transaction timestamp.
+Sumcash transaction format is indendical to a Bitcoin transaction format with the exception of included transaction timestamp.
 
 | Property | Description | Bytes |
 |----------|-------------|-------|
@@ -261,7 +261,7 @@ Sumcoin transaction format is indendical to a Bitcoin transaction format with th
 | Locktime | block number or Unix timestamp when the transaction finalizes | 4 |
 
 
-As of Sumcoin 0.11, timestamp is no longer required and transaction format is exactly the same as Bitcoin. The only exception is that `version` is now `3`.
+As of Sumcash 0.11, timestamp is no longer required and transaction format is exactly the same as Bitcoin. The only exception is that `version` is now `3`.
 
 | Property | Description | Bytes |
 |----------|-------------|-------|
@@ -275,20 +275,20 @@ As of Sumcoin 0.11, timestamp is no longer required and transaction format is ex
 
 ## Creating transaction
 
-In this simple example it it will be demonstrated how to use popular bitcore library to create a Sumcoin transaction.
+In this simple example it it will be demonstrated how to use popular bitcore library to create a Sumcash transaction.
 Example will be using node.js and javascript. Similar libaries can be found for practically all other programming languages though.
-Using bitcore is possible because Sumcoin is based of Bitcoin and the two share more than 99% of the code.
+Using bitcore is possible because Sumcash is based of Bitcoin and the two share more than 99% of the code.
 
 ```
 const bitcore = require('bitcore-lib');
 
 //
-// Add sumcoin network params
+// Add sumcash network params
 //
 
 bitcore.Networks.add({
-    name: 'sumcoin',
-    alias: 'sumoin',
+    name: 'sumcash',
+    alias: 'sumcash',
     pubkeyhash: 0x37,
     privatekey: 0xb7,
     scripthash: 0x75,
@@ -297,8 +297,8 @@ bitcore.Networks.add({
   });
 
 bitcore.Networks.add({
-    name: 'sumcoin-testnet',
-    alias: 'sumoin-test',
+    name: 'sumcash-testnet',
+    alias: 'sumcash-test',
     pubkeyhash: 0x6f,
     privatekey: 0xef,
     scripthash: 0xc4,
@@ -307,8 +307,8 @@ bitcore.Networks.add({
   });
 
 
-// set sumcoin-testnet as default network
-bitcore.Networks.defaultNetwork = bitcore.Networks.get('sumcoin-testnet');
+// set sumcash-testnet as default network
+bitcore.Networks.defaultNetwork = bitcore.Networks.get('sumcash-testnet');
 
 //
 // Generate privkey and address
@@ -321,7 +321,7 @@ const bn = bitcore.crypto.BN.fromBuffer(hash);
 const privateKey = new bitcore.PrivateKey(bn);
 const myAddress = privateKey.toAddress();
 
-console.log("This is my address: ", myAddress.toString()); // this is the address which will be spending coins, so you need testnet sumcoins sent here. Use faucet: https://sumcoinexplorer.net/faucet/
+console.log("This is my address: ", myAddress.toString()); // this is the address which will be spending coins, so you need testnet sumcashs sent here. Use faucet: https://sumcashexplorer.net/faucet/
 
 //
 // Assemble, sign and send a transaction
@@ -341,13 +341,13 @@ var rec = "mwudtnoRS13KasEYv8Pthf7Qu4G1eLHgnZ"; // random reciever, replace with
 const transaction = new bitcore.Transaction()
     // Expects an array of utxos 
     .from(utxo)
-    .feePerKb(10000) // data on Sumcoin costs 0.01 SUM / kB
+    .feePerKb(10000) // data on Sumcash costs 0.01 SUMC / kB
     .to(reciever, 1) // sending 1 tSUM to reciever
     .addData("my test transaction!") // Add transaction metadata
     .change(myAddress) // change
     .sign(privateKey);
 
-// Overriding txn version to 3, because that's what it needs to be to work with sumcoin
+// Overriding txn version to 3, because that's what it needs to be to work with sumcash
 transaction.version = 3;
 
 console.log(txHex);
@@ -365,12 +365,12 @@ You can send this hex using local testnet node or via remote API which allows fo
 > a computer after power-on or general reset, especially the operating
 > system which will then take care of loading other software as needed.<sup>[9.1](#footnote-9.1)</sup>
 
-For Sumcoin it means loading all of the block chain history from a special
+For Sumcash it means loading all of the block chain history from a special
 file containing a snapshot of block data.
 
-This special file, named `bootstrap.dat`, allows the Sumcoin client to
+This special file, named `bootstrap.dat`, allows the Sumcash client to
 sync from your hard drive instead of the internet. Using a
-`bootstrap.dat` file is faster and reduces stress on the Sumcoin network to sync new nodes.
+`bootstrap.dat` file is faster and reduces stress on the Sumcash network to sync new nodes.
 
 ### How do I make a `bootstrap.dat`?
 
@@ -379,7 +379,7 @@ you're running linux you can do the following to manufacture your own.
 First, shutdown your client. Allow it to cleanly exit so we know the block
 data is settled.
 
-Now, navigate to the directory `~/.sumcoin/blocks` in your terminal and
+Now, navigate to the directory `~/.sumcash/blocks` in your terminal and
 notice the files named `blk00000.dat`, `blk00001.dat`, `blk00002.dat`, etc.
 These are the raw block data files that can be combined to form the
 `bootstrap.dat`!
@@ -392,13 +392,13 @@ The file is often then compressed (zip'ed, tar/gzip'ed) and shared.
 
 The same process can be executed on Microsoft Windows (7+):
 
-> CD C:\Users\<my_user>\AppData\Roaming\Sumcoin
+> CD C:\Users\<my_user>\AppData\Roaming\Sumcash
 
 > COPY /b blk0001.dat+blk0002.dat bootstrap.dat
 
 Or on OS X:
 
-> cd "~/Library/Application Support/Sumcoin/"
+> cd "~/Library/Application Support/Sumcash/"
 
 > cat blk*.dat > bootstrap.dat
 
@@ -409,22 +409,22 @@ On linux and OS X you can create hash of the bootstrap:
 
 ### How do I use a `bootstrap.dat`?
 
-Assuming you're on linux and you haven't started the Sumcoin client before.
+Assuming you're on linux and you haven't started the Sumcash client before.
 
-Make the directory `~/.sumcoin` if it doesn't exist and then move the
-`bootstrap.dat` into the `~/.sumcoin` directory.
+Make the directory `~/.sumcash` if it doesn't exist and then move the
+`bootstrap.dat` into the `~/.sumcash` directory.
 
-Start the Sumcoin client. You should see the status `Importing blocks from disk...` if the client has found the `bootstrap.dat` and is using it to
+Start the Sumcash client. You should see the status `Importing blocks from disk...` if the client has found the `bootstrap.dat` and is using it to
 sync the block chain.
 
 ### Where can I download a `bootstrap.dat`?
 
-We've put some recent copies on our [file server](https://files.sumcoin.org) :)
+We've put some recent copies on our [file server](https://files.sumcash.net) :)
 
-* [Mainnet bootstrap.dat.zip](https://files.sumcoin.org/download/sumcoin_mainnet_2018_08_06_bootstrap.dat.zip) Scrypt `66c494e0c2a4c78ba19f14a3781ca77f1b8b16f3833fb85c10959ee991764a4c` | [torrent](https://files.sumcoin.org/download/sumcoin_mainnet_2018_08_06_bootstrap.dat.zip.torrent) | [magnet](magnet:?xt=urn:btih:9fc1f0d09a6598ae96ba5d8b9ac5caca0ae92402&dn=sumcoin%5Fmainnet%5F2018%5F08%5F06%5Fbootstrap.dat.zip&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ilibr.org%3A80%2Fannounce&tr=http%3A%2F%2Fatrack.pow7.com%2Fannounce&tr=http%3A%2F%2Fbt.henbt.com%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=http%3A%2F%2Fopen.touki.ru%2Fannounce.php&tr=http%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fpow7.com%3A80%2Fannounce&tr=http%3A%2F%2Fretracker.krs-ix.ru%3A80%2Fannounce)
-* [Mainnet bootstrap.dat.tar.gz](https://files.sumcoin.org/download/sumcoin_mainnet_2018_08_06_bootstrap.dat.tar.gz) Scrypt `bac807186735347e2c7ccbfecb3d91045de32246258a7ba3e3d0a9c2a10b8ff0` | [torrent](https://files.sumcoin.org/download/sumcoin_mainnet_2018_08_06_bootstrap.dat.tar.gz.torrent) | [magnet](magnet:?xt=urn:btih:77f1c5352e9eca71e9f4f1e31487e7d13900a335&dn=sumcoin%5Fmainnet%5F2018%5F08%5F06%5Fbootstrap.dat.tar.gz&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ilibr.org%3A80%2Fannounce&tr=http%3A%2F%2Fatrack.pow7.com%2Fannounce&tr=http%3A%2F%2Fbt.henbt.com%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=http%3A%2F%2Fopen.touki.ru%2Fannounce.php&tr=http%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fpow7.com%3A80%2Fannounce&tr=http%3A%2F%2Fretracker.krs-ix.ru%3A80%2Fannounce)
-* [Testnet bootstrap.dat.zip](https://files.sumcoin.org/download/sumcoin_testnet_2018_08_06_bootstrap.dat.zip) Scrypt `1312aaaf0d8466b6f7006bac60a5cad4daf36e1241f791924e45bc5959ff2452` | [torrent](https://files.sumcoin.org/download/sumcoin_testnet_2018_08_06_bootstrap.dat.zip.torrent) | [magnet](magnet:?xt=urn:btih:c70afb5100953362b45df75133e01bf1f9466e04&dn=sumcoin%5Ftestnet%5F2018%5F08%5F06%5Fbootstrap.dat.zip&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ilibr.org%3A80%2Fannounce&tr=http%3A%2F%2Fatrack.pow7.com%2Fannounce&tr=http%3A%2F%2Fbt.henbt.com%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=http%3A%2F%2Fopen.touki.ru%2Fannounce.php&tr=http%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fpow7.com%3A80%2Fannounce&tr=http%3A%2F%2Fretracker.krs-ix.ru%3A80%2Fannounce)
-* [Testnet bootstrap.dat.tar.gz](https://files.sumcoin.org/download/sumcoin_testnet_2018_08_06_bootstrap.dat.tar.gz) Scrypt `15f0e40a7e99083b2ed27c78d37d0f201fd6c744537cf643925d0aae84395896` | [torrent](https://files.sumcoin.org/download/sumcoin_testnet_2018_08_06_bootstrap.dat.tar.gz.torrent) | [magnet](magnet:?xt=urn:btih:eb2a70e90285ca847be47b2f96e36e5cdec4580e&dn=sumcoin%5Ftestnet%5F2018%5F08%5F06%5Fbootstrap.dat.tar.gz&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ilibr.org%3A80%2Fannounce&tr=http%3A%2F%2Fatrack.pow7.com%2Fannounce&tr=http%3A%2F%2Fbt.henbt.com%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=http%3A%2F%2Fopen.touki.ru%2Fannounce.php&tr=http%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fpow7.com%3A80%2Fannounce&tr=http%3A%2F%2Fretracker.krs-ix.ru%3A80%2Fannounce)
+* [Mainnet bootstrap.dat.zip](https://files.sumcash.net/download/sumcash_mainnet_2018_08_06_bootstrap.dat.zip) Scrypt `66c494e0c2a4c78ba19f14a3781ca77f1b8b16f3833fb85c10959ee991764a4c` | [torrent](https://files.sumcash.net/download/sumcash_mainnet_2018_08_06_bootstrap.dat.zip.torrent) | [magnet](magnet:?xt=urn:btih:9fc1f0d09a6598ae96ba5d8b9ac5caca0ae92402&dn=sumcash%5Fmainnet%5F2018%5F08%5F06%5Fbootstrap.dat.zip&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ilibr.org%3A80%2Fannounce&tr=http%3A%2F%2Fatrack.pow7.com%2Fannounce&tr=http%3A%2F%2Fbt.henbt.com%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=http%3A%2F%2Fopen.touki.ru%2Fannounce.php&tr=http%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fpow7.com%3A80%2Fannounce&tr=http%3A%2F%2Fretracker.krs-ix.ru%3A80%2Fannounce)
+* [Mainnet bootstrap.dat.tar.gz](https://files.sumcash.net/download/sumcash_mainnet_2018_08_06_bootstrap.dat.tar.gz) Scrypt `bac807186735347e2c7ccbfecb3d91045de32246258a7ba3e3d0a9c2a10b8ff0` | [torrent](https://files.sumcash.net/download/sumcash_mainnet_2018_08_06_bootstrap.dat.tar.gz.torrent) | [magnet](magnet:?xt=urn:btih:77f1c5352e9eca71e9f4f1e31487e7d13900a335&dn=sumcash%5Fmainnet%5F2018%5F08%5F06%5Fbootstrap.dat.tar.gz&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ilibr.org%3A80%2Fannounce&tr=http%3A%2F%2Fatrack.pow7.com%2Fannounce&tr=http%3A%2F%2Fbt.henbt.com%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=http%3A%2F%2Fopen.touki.ru%2Fannounce.php&tr=http%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fpow7.com%3A80%2Fannounce&tr=http%3A%2F%2Fretracker.krs-ix.ru%3A80%2Fannounce)
+* [Testnet bootstrap.dat.zip](https://files.sumcash.net/download/sumcash_testnet_2018_08_06_bootstrap.dat.zip) Scrypt `1312aaaf0d8466b6f7006bac60a5cad4daf36e1241f791924e45bc5959ff2452` | [torrent](https://files.sumcash.net/download/sumcash_testnet_2018_08_06_bootstrap.dat.zip.torrent) | [magnet](magnet:?xt=urn:btih:c70afb5100953362b45df75133e01bf1f9466e04&dn=sumcash%5Ftestnet%5F2018%5F08%5F06%5Fbootstrap.dat.zip&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ilibr.org%3A80%2Fannounce&tr=http%3A%2F%2Fatrack.pow7.com%2Fannounce&tr=http%3A%2F%2Fbt.henbt.com%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=http%3A%2F%2Fopen.touki.ru%2Fannounce.php&tr=http%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fpow7.com%3A80%2Fannounce&tr=http%3A%2F%2Fretracker.krs-ix.ru%3A80%2Fannounce)
+* [Testnet bootstrap.dat.tar.gz](https://files.sumcash.net/download/sumcash_testnet_2018_08_06_bootstrap.dat.tar.gz) Scrypt `15f0e40a7e99083b2ed27c78d37d0f201fd6c744537cf643925d0aae84395896` | [torrent](https://files.sumcash.net/download/sumcash_testnet_2018_08_06_bootstrap.dat.tar.gz.torrent) | [magnet](magnet:?xt=urn:btih:eb2a70e90285ca847be47b2f96e36e5cdec4580e&dn=sumcash%5Ftestnet%5F2018%5F08%5F06%5Fbootstrap.dat.tar.gz&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ilibr.org%3A80%2Fannounce&tr=http%3A%2F%2Fatrack.pow7.com%2Fannounce&tr=http%3A%2F%2Fbt.henbt.com%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A2710%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=http%3A%2F%2Fopen.touki.ru%2Fannounce.php&tr=http%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fpow7.com%3A80%2Fannounce&tr=http%3A%2F%2Fretracker.krs-ix.ru%3A80%2Fannounce)
 
 ### Footnotes
 
