@@ -64,7 +64,7 @@ PeerAssets API provider, implemented using pypeerassets.
 
 github: https://github.com/PeerAssets/papi
 
-deployed: https://papi.sumcash.net/api/v1/decks
+deployed: https://papi.sumcash.org/api/v1/decks
 
 ## Wallets
 
@@ -104,6 +104,6 @@ There is a number of interesting RFC which are currently discussed, such as:
 
 [The benefits of PeerAssets](https://medium.com/sumcash/the-benefits-of-peerassets-77bad7693925)
 
-[[Tutorial] PeerAssets Peer to Peer (p2p) Transactions](https://talk.sumcash.net/t/tutorial-peerassets-peer-to-peer-p2p-transactions/8640)
+[[Tutorial] PeerAssets Peer to Peer (p2p) Transactions](https://talk.sumcash.org/t/tutorial-peerassets-peer-to-peer-p2p-transactions/8640)
 
-[[Tutorial] Basic Deck Creation with PeerAssets](https://talk.sumcash.net/t/tutorial-basic-deck-creation-with-peerassets/8639)
+[[Tutorial] Basic Deck Creation with PeerAssets](https://talk.sumcash.org/t/tutorial-basic-deck-creation-with-peerassets/8639)

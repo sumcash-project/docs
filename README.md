@@ -18,7 +18,7 @@ Make sure you have Node.js installed. If you don't, [**please follow this guide*
 1. Clone this repo: `git clone https://github.com/sumcash-project/docs.git`;
 2. Inside the cloned folder, run: `npm i -g brunch && npm i`; (skip the first command if you already have `brunch` installed);
 3. Run: `npm start`.
-4. Access http://localhost:3333/ in your browser.
+4. Access http://localhost:3001/ in your browser.
 
 Any changes in the project (both on docs and/or code) will be reflect automatically in the browser once you refresh it.
 

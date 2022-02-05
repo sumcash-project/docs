@@ -2,13 +2,13 @@
 
 ## Official Sites
 
-- [Sumcash.net](https://sumcash.net/)
+- [Sumcash.net](https://sumcash.org/)
 - [GitHub](https://github.com/sumcash-project/)
-- [Foundation](https://sumcash.net/foundation.html)
+- [Foundation](https://sumcash.org/foundation.html)
 
 ## Forums
 
-- [Sumcashtalk](https://talk.sumcash.net/)
+- [Sumcashtalk](https://talk.sumcash.org/)
 - [Reddit](https://www.reddit.com/r/sumcash/)
 - [Bitcointalk Thread](https://bitcointalk.org/index.php?topic=101820.0)
 
@@ -25,7 +25,7 @@
 
 ## News
 
-- [Team Updates](https://talk.sumcash.net/c/official-updates)
+- [Team Updates](https://talk.sumcash.org/c/official-updates)
 
 ## Blog
 
@@ -33,7 +33,7 @@
 
 ## Sumcash myths
 
-- [Forum](https://talk.sumcash.net/t/pillows-sumcash-myths/2518)
+- [Forum](https://talk.sumcash.org/t/pillows-sumcash-myths/2518)
 
 ## Tools
 

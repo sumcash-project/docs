@@ -2,7 +2,7 @@
 
 ## Official client implementation
 
-Once you install official Sumcash client from sumcash.net, you’ll have access to three executables: sumcashd, sumcash-qt, and sumcash-cli.
+Once you install official Sumcash client from sumcash.org, you’ll have access to three executables: sumcashd, sumcash-qt, and sumcash-cli.
 
 ### Sumcash Wallet
 
@@ -13,7 +13,7 @@ From the Help menu, you can access a console where you can enter the RPC command
 
 `sumcashd` provides a full peer which you can interact with through JSON-RPC interface on port 3332 (9904 for testnet).
 
-For more information on how to use the JSON-RPC interface see the [developer documents](https://docs.sumcash.net/#/developers)
+For more information on how to use the JSON-RPC interface see the [developer documents](https://docs.sumcash.org/#/developers)
 
 ### sumcash-cli
 
@@ -48,11 +48,11 @@ On Linux, Mac OSX, and other Unix-like systems, this can be accomplished by runn
 
 ### Windows Installation
 
-To install on Windows, you can find the download files here: https://sumcash.net/wallet.html.  Once download is complete, extract the contents of the folder.  Depending on if your system is x32 or x64 bits, choosing the relevant folder.  Run the sumcash-win_setup.exe and you will be guided through the installation process.  Once finishes, the client can be launched by running "sumcash-qt.exe" from the appropriate folder.
+To install on Windows, you can find the download files here: https://sumcash.org/wallet.html.  Once download is complete, extract the contents of the folder.  Depending on if your system is x32 or x64 bits, choosing the relevant folder.  Run the sumcash-win_setup.exe and you will be guided through the installation process.  Once finishes, the client can be launched by running "sumcash-qt.exe" from the appropriate folder.
 
 ### Mac Installation
 
-To install for MacOS, you can find the download files here: https://sumcash.net/wallet.html.  Once the download is complete, extract the contents of the folder.  Inside the extracted folder, double click the "Sumcash-Qt.dmg" file to open the client.
+To install for MacOS, you can find the download files here: https://sumcash.org/wallet.html.  Once the download is complete, extract the contents of the folder.  Inside the extracted folder, double click the "Sumcash-Qt.dmg" file to open the client.
 
 ### Debian Installation
 
@@ -104,7 +104,7 @@ The send tab is used to send Sumcash.  The "Pay To" section is where a target ad
 
 ![Recieve Tab](../img/recieve.png)
 
-The Receive tab lists all wallet addresses attached to the Sumcash client.  Generating a new address is as simple as clicking the "New Address" button at the bottom of the screen.  The "Sign Message" button can also be used to verify ownership of a wallet.  [There is a tutorial on signing messages with the Sumcash client here.](https://docs.sumcash.net/#/how-to-sign-a-message-using-the-sumcash-client)  The example addresses have been removed from the image for privacy sake.
+The Receive tab lists all wallet addresses attached to the Sumcash client.  Generating a new address is as simple as clicking the "New Address" button at the bottom of the screen.  The "Sign Message" button can also be used to verify ownership of a wallet.  [There is a tutorial on signing messages with the Sumcash client here.](https://docs.sumcash.org/#/how-to-sign-a-message-using-the-sumcash-client)  The example addresses have been removed from the image for privacy sake.
 
 ### Transactions
 
@@ -358,27 +358,27 @@ sendrawtransaction "0100000062815a5301749fb9a1434c1072fb67f928f3b5592de88053bccf
 
 First, check that the address you want to use is loaded up into the wallet of your Sumcash client.  You can use the standard client.  The list of your addresses can be found using the receive tab.
 
-![1](https://talk.sumcash.net/uploads/default/original/2X/3/3a72b5afa078a4d7b24cfaa7e2a5a303014ec6c6.jpeg)
+![1](https://talk.sumcash.org/uploads/default/original/2X/3/3a72b5afa078a4d7b24cfaa7e2a5a303014ec6c6.jpeg)
 
 Once you are satisfied that the address is in the wallet (you can even copy it to your clipboard if you like), open up the 'Sign message...' option of the 'File' menu.
 
-![2](https://talk.sumcash.net/uploads/default/original/2X/3/3709984353eb778d29e1a91704b170b702383e59.jpeg)
+![2](https://talk.sumcash.org/uploads/default/original/2X/3/3709984353eb778d29e1a91704b170b702383e59.jpeg)
 
 At this point, you should be on the 'Sign Message' tab where you can paste in the address you want to use, either via your clipboard or by clicking on the address book button.
 
-![3](https://talk.sumcash.net/uploads/default/original/2X/3/3b6c44045c17aab2a7694b571812d960da105975.jpeg)
+![3](https://talk.sumcash.org/uploads/default/original/2X/3/3b6c44045c17aab2a7694b571812d960da105975.jpeg)
 
 Now you can type your message into the big blank box.  It might be best to copy and paste this text from a plaintext source in order to avoid any formatting issues.  When you are done, hit the 'Sign Message' button.
 
-![4](https://talk.sumcash.net/uploads/default/original/2X/a/abc4f6835c2841fbd763f9985dcd15034005db50.jpeg)
+![4](https://talk.sumcash.org/uploads/default/original/2X/a/abc4f6835c2841fbd763f9985dcd15034005db50.jpeg)
 
 If it completed its function correctly, it will display in green 'Messaged signed.'  Copy the signature using the convenient button.
 
-![5](https://talk.sumcash.net/uploads/default/original/2X/8/8728853e3d051ebf766435752b6102ffcd8f960c.jpeg)
+![5](https://talk.sumcash.org/uploads/default/original/2X/8/8728853e3d051ebf766435752b6102ffcd8f960c.jpeg)
 
 Just to be sure everything worked correctly, you can validate your signature.  Go to the 'Verify Message' tab and fill in all the fields.  If everything looks good, and it comes back with a green 'Message verified.' then you can share with anyone your signature, message, and address and they should be able to verify it just the same.
 
-![6](https://talk.sumcash.net/uploads/default/original/2X/1/1f6ed2c60c32921af99e1c59cc27eb4124caaffa.jpeg)
+![6](https://talk.sumcash.org/uploads/default/original/2X/1/1f6ed2c60c32921af99e1c59cc27eb4124caaffa.jpeg)
 
 Congratulations, you have now cryptographically signed and verified a message!
 
@@ -387,7 +387,7 @@ Congratulations, you have now cryptographically signed and verified a message!
 
 ### Stakebox
 
-![stakebox](https://talk.sumcash.net/uploads/default/original/2X/8/8581bbbb551a82aea92598a5aa93c4144e387317.png)
+![stakebox](https://talk.sumcash.org/uploads/default/original/2X/8/8581bbbb551a82aea92598a5aa93c4144e387317.png)
 
 
 Stakebox is a project by Sumcash Foundation and PiSupply to deliver cost and power efficient, user friendly set-top box able to run a blockchain node.
@@ -403,11 +403,11 @@ Beside ordering a pre-installed Stakebox from [PiSupply website](https://www.sta
 What do you need:
 
 * Raspberry Pi (2 or newer)
-* image downloaded from files.sumcash.net
+* image downloaded from files.sumcash.org
 * an SD card (4GB +)
 * some spare time
 
-Download the image from [files.sumcash.net](https://files.sumcash.net/), use the [Etcher](http://etcher.io/) to load it to the SD card.
+Download the image from [files.sumcash.org](https://files.sumcash.org/), use the [Etcher](http://etcher.io/) to load it to the SD card.
 
 Now follow the guide: https://www.stakebox.org/blogs/learn/getting-started-with-sumcash-stakebox.
 
@@ -445,7 +445,7 @@ Click continue until everything is finalized and completed.  You now have the Su
 
 You can find the source code for this wallet here: https://github.com/sumcash-project/sumcash-address-generator/
 
-If you are interested in generating a paper wallet for holding your Sumcash, this guide will walk you through the process.  First, navigate to this address: https://paperwallet.sumcash.net/
+If you are interested in generating a paper wallet for holding your Sumcash, this guide will walk you through the process.  First, navigate to this address: https://paperwallet.sumcash.org/
 
 ![Paper Wallet Home Screen](../img/paperwallet_mainscreen.JPG)
 

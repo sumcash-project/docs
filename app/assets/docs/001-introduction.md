@@ -12,6 +12,6 @@ Since its first block in 2012, Sumcash has remained one of the most energy effec
 
 ## Sumcash University
 
-[Sumcash university](https://university.sumcash.net/) is a community project aimed at less technical members of the community to grasp and understand the complex topic of public blockchain.
+[Sumcash university](https://university.sumcash.org/) is a community project aimed at less technical members of the community to grasp and understand the complex topic of public blockchain.
 
 ---

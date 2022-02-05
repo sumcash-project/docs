@@ -16,8 +16,8 @@ The Foundation is controlled by a Board of Directors.
 
 ## Footnotes
 
-<a id="footnote-5.1">5.1</a>: https://talk.sumcash.net/t/update-15-the-sumcash-foundation-is-now-open-for-business/
+<a id="footnote-5.1">5.1</a>: https://talk.sumcash.org/t/update-15-the-sumcash-foundation-is-now-open-for-business/
 
-<a id="footnote-5.2">5.2</a>: https://sumcash.net/foundation
+<a id="footnote-5.2">5.2</a>: https://sumcash.org/foundation
 
 ---
